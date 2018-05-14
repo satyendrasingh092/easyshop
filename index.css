@@ -1,0 +1,228 @@
+html,body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto, Arial, sans-serif;
+    letter-spacing: 0;
+}
+#navbar {
+    z-index: 123;
+    height: 10em;
+    background: white;
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    display: flex;
+    align-items: center;
+}
+
+#footer{
+   width: 100%;
+    overflow-x: auto;
+    position:fixed;
+    bottom:0px;
+    background-color: #333; /* Black background color */
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+#loadMore {
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+}
+
+#loadMore > button{
+    background: #ffffff;
+    border-radius: 3px;
+    color: black;
+    display: inline-block;
+    padding: 10px 30px;
+    outline:none;
+    transition: all 0.25s ease-out;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+#loadMore > button:hover {
+    background-color: #2fada1;
+    color:white
+}
+
+#mainDiv{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 1rem 1rem;
+    overflow: auto;
+    background: #fff;
+}
+
+#mainDiv > div{
+    width: 80%;
+}
+
+.productBox {
+    width: 220px;
+    min-height: 200px;
+    marginBottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.productBox .item {
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    height: 100%;
+}
+.productBox .item:hover {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+.productBox .item img {
+    width: 100%;
+    height : 152px
+}
+.productBox .item p {
+    padding-bottom: 40px;
+}
+.productBox .item .productName {
+    font-size: 14px;
+}
+.productBox .item .productPrice {
+    font-size: 14px;
+}
+
+.sales-price{
+    display: inline-block;
+    fontSize: 16px;
+    fontWeight: 550;
+    color: #212121
+}
+
+.mark-price{
+    text-decoration: line-through;
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 14px;
+    color: #878787;
+}
+
+.sales-msg{
+    display: inline-block;
+    margin-left: 8px;
+    color: #388e3c;
+    font-size: 13px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+}
+
+.detailedView{
+    display: flex;
+}
+
+/*@media screen and (min-width: 991px) {
+    .productBox  h4 {
+        font-size: 30px;
+        font-style: italic;
+    }
+    .productBox .productTxt {
+        max-width: 50%;
+        width: 100%;
+        padding: 50px;
+        float: left;
+        background: inherit;
+        min-height: 378px;
+    }
+    .productBox  img {
+        max-width: 50%;
+        width: 100%;
+        float: left;
+        min-height: 378px;
+    }
+}*/
+
+.featureButton{
+    border: solid 2px #2874f0;
+    color: #2874f0;
+    box-shadow: none;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px 30px;
+    outline:none;
+    transition: all 0.25s ease-out;
+    -webkit-font-smoothing: antialiased;
+}
+
+.featureButton:hover{
+    background-color: #2fada1;
+    color:white
+}
+
+.selectedFeatureButton{
+    border: solid 2px #2874f0;
+    color: white;
+    box-shadow: none;
+    cursor: pointer;
+    background: #2fada1;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px 30px;
+    outline:none;
+    transition: all 0.25s ease-out;
+    -webkit-font-smoothing: antialiased;
+}
+
+.moreLess {
+    background: none;
+    outline: none;
+    border: none;
+    color: #2fada1;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.detailedImg{
+    width: 40%;
+}
+.detailedTxt{
+    width: 60%;
+    padding-left: 35px;
+    padding-right: 15px
+}
+
+
+@media screen and (max-width: 768px) {
+    .productBox .item img {
+        height: 152px;
+    }
+    .detailedView{
+        flex-direction: column;
+    }
+    .detailedImg{
+        width: 100%;
+    }
+    .detailedTxt{
+        width: 100%;
+        padding: 0px;
+    }
+
+    #mainDiv > div {
+        width: 100%;
+    }
+
+}
+
